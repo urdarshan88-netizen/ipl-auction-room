@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.claude/
+# A separate build made by another session; not part of this project.
+ipl-auction/

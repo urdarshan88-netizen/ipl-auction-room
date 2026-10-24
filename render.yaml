@@ -1,0 +1,13 @@
+# One-click deploy of the game server to Render (free web service, WebSockets supported).
+# After deploying, share https://<your-service>.onrender.com/#ROOMCODE links with anyone.
+services:
+  - type: web
+    name: ipl-auction-room
+    runtime: node
+    plan: free
+    buildCommand: npm install --omit=dev
+    startCommand: node server/server.js
+    healthCheckPath: /api/info
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false

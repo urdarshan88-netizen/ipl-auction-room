@@ -1,0 +1,25 @@
+{
+  "name": "ipl-auction-room",
+  "productName": "IPL Auction Room",
+  "version": "2.0.0",
+  "description": "Multiplayer IPL auction game: create a room, invite friends, and bid for real players in Mega, Mini, Legends and Blitz auctions.",
+  "main": "desktop/main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "server": "node server/server.js",
+    "build:web": "node tools/build-web.js",
+    "package:win": "powershell -ExecutionPolicy Bypass -File tools/package-win.ps1"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@electron/packager": "18.3.6",
+    "electron": "33.2.1"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "1.3.0",
+    "ws": "8.22.0"
+  }
+}
